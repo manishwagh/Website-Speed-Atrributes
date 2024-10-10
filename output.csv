@@ -5,3 +5,4 @@ https://www.wikipedia.org,0.07 MB,7,0.93s,0s,0.02s,0.1s,0.93s,0.09s,0,2,3,7,beni
 https://www.reddit.com,0.18 MB,2,0.13s,0s,0s,0.03s,0.13s,0.02s,0,0,0,2,benign
 https://www.google.co.in,0.16 MB,7,0.26s,0s,0s,0.08s,0.26s,0.06s,1,0,4,7,benign
 https://www.amazon.com,2.26 MB,242,3.74s,0.01s,0.02s,0.15s,3.66s,0.14s,4,13,219,242,benign
+https://x.com/,0.86 MB,13,3s,0s,0.13s,1.71s,3s,0.52s,0,6,1,13,benign
