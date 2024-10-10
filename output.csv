@@ -6,3 +6,18 @@ https://www.reddit.com,0.18 MB,2,0.13s,0s,0s,0.03s,0.13s,0.02s,0,0,0,2,benign
 https://www.google.co.in,0.16 MB,7,0.26s,0s,0s,0.08s,0.26s,0.06s,1,0,4,7,benign
 https://www.amazon.com,2.26 MB,242,3.74s,0.01s,0.02s,0.15s,3.66s,0.14s,4,13,219,242,benign
 https://x.com/,0.86 MB,13,3s,0s,0.13s,1.71s,3s,0.52s,0,6,1,13,benign
+https://www.msn.com,,,,,,,,,,,,,benign
+https://www.wordpress.com,1.03 MB,59,1.22s,0s,0s,0.04s,1.22s,0.03s,2,22,20,59,benign
+https://www.google.com.au,0.36 MB,11,0.63s,0s,0s,0.08s,0.63s,0.07s,2,3,5,11,benign
+https://www.google.com.tr,0.36 MB,12,1.19s,0s,0s,0.12s,1.19s,0.07s,2,3,5,12,benign
+https://www.microsoftonline.com,,,s,,,,,,,,,,benign
+https://www.whatsapp.com,26.87 MB,74,1.83s,0.01s,0.01s,0.31s,1.82s,0.28s,5,11,48,74,benign
+https://www.github.com,1.36 MB,100,2.56s,0s,0s,0.03s,2.55s,0.02s,10,72,10,100,benign
+https://www.google.com.tw,0.16 MB,7,0.6s,0s,0s,0.29s,0.6s,0.26s,1,0,4,7,benign
+https://www.apple.com,2.66 MB,61,2.37s,0s,0s,0.06s,2.35s,0.05s,7,11,30,61,benign
+https://www.livejasmin.com,,,,,,,,,,,,,benign
+https://www.amazon.co.jp,2.45 MB,184,2.51s,0s,0.01s,0.15s,2.44s,0.14s,5,10,163,184,benign
+https://www.blogspot.com,0.7 MB,62,1.35s,0s,0s,0.08s,1.35s,0.02s,2,3,44,62,benign
+https://www.google.pl,0.28 MB,9,0.4s,0s,0s,0.08s,0.4s,0.07s,1,1,5,9,benign
+https://www.deloton.com,,,s,,,,,,,,,,benign
+https://www.popads.net,0.4 MB,31,1.48s,0.02s,0.03s,0.32s,1.48s,0.31s,1,7,17,31,benign

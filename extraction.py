@@ -21,8 +21,7 @@ def configure_driver():
 
 
 def extract_data(driver, url):
-    """Extracts website performance data from Site24x7 for a given URL."""
-    #wait = WebDriverWait(driver, 10)  # Increased wait time
+    """Extracts website speed data from Site24x7 for a given URL."""
     try:
         # Find elements and extract data
         driver.get("https://www.site24x7.com/tools/web-page-analyzer.html")
@@ -31,11 +30,11 @@ def extract_data(driver, url):
         element.send_keys(url.strip())
         element_click = wait.until(ec.presence_of_element_located((By.ID, "testBtn")))
         element_click.click()
-        label = "benign"
-        #label = "maliious"
+        label = "benign"        # use to label when extracting good websites data
+        #label = "maliious"     # use to label when extracting phishing websites data
 
-        # Wait and extract data (modify selectors if needed)
-        time.sleep(60)  # Adjust wait time as needed
+        # Wait and extract data
+        time.sleep(60)  # Wait timer added to wait until elements are visible
         data = {
             "Website_URL": urlparse(url).geturl(),
             "Page_Size": driver.find_element(By.ID, "pageSize").text,
