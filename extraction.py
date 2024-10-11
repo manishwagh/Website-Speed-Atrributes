@@ -84,6 +84,7 @@ def web_page_speed_test(filename, output_csv):
         print(f"An error occurred: {e}")
     finally:
         driver.quit()  # Close the browser after all extractions
+        print("Data saved to csv")
 
         # Write results to a CSV file
         file_exists = os.path.isfile(output_csv)  # Check if the file already exists
@@ -96,6 +97,5 @@ def web_page_speed_test(filename, output_csv):
             if not file_exists:
                 writer.writeheader()  # Write the header only if the file doesn't exist
             writer.writerows(results)  # Write the data
-
 
 web_page_speed_test("testurls.txt", "output.csv")
