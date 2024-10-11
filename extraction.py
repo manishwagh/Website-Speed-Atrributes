@@ -9,6 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import TimeoutException
 import time
 import csv
+import re
 
 
 def configure_driver():
@@ -34,7 +35,16 @@ def extract_data(driver, url):
         #label = "maliious"     # use to label when extracting phishing websites data
 
         # Wait and extract data
-        time.sleep(60)  # Wait timer added to wait until elements are visible
+        time.sleep(35)  # Wait timer added to wait until elements are visible
+
+        date_string = driver.find_element(By.ID, "currentTime").text
+        # regex to extract the date and time components
+        match = re.search(r'(\w+ \w+ \d+ \d+).*?(\d+:\d+:\d+)', date_string) #Fri Oct 11 2024 20:34:33 GMT+0530 (India Standard Time)
+        if match:
+            date_part = match.group(1)  # 'Fri, Oct 11 2024'
+            time_part = match.group(2)  # '20:34:33'
+        else:
+            date_part, time_part = None, None  # Handle cases where regex fails
         data = {
             "Website_URL": urlparse(url).geturl(),
             "Page_Size": driver.find_element(By.ID, "pageSize").text,
@@ -49,6 +59,8 @@ def extract_data(driver, url):
             "JavaScripts_Count": driver.find_element(By.ID, "scriptscount").text,
             "Image_Count": driver.find_element(By.ID, "imageCount").text,
             "Total_Objects": driver.find_element(By.ID, "totalObjects").text,
+            "Date": date_part,  # extracted date
+            "Time": time_part,  # extracted time
             "Label":label
         }
         return data
