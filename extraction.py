@@ -35,7 +35,7 @@ def extract_data(driver, url):
         #label = "maliious"     # use to label when extracting phishing websites data
 
         # Wait and extract data
-        time.sleep(35)  # Wait timer added to wait until elements are visible
+        time.sleep(60)  # Wait timer added to wait until elements are visible
 
         date_string = driver.find_element(By.ID, "currentTime").text
         # regex to extract the date and time components
