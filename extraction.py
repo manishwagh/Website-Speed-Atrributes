@@ -31,11 +31,12 @@ def extract_data(driver, url):
         element.send_keys(url.strip())
         element_click = wait.until(ec.presence_of_element_located((By.ID, "testBtn")))
         element_click.click()
-        label = "benign"        # use to label when extracting good websites data
+        #label = "malicious"        # use to label when extracting bad websites data
+        #label = "benign"        # use to label when extracting good websites data
         #label = "maliious"     # use to label when extracting phishing websites data
 
         # Wait and extract data
-        time.sleep(60)  # Wait timer added to wait until elements are visible
+        time.sleep(30)  # Wait timer added to wait until elements are visible
 
         date_string = driver.find_element(By.ID, "currentTime").text
         # regex to extract the date and time components
@@ -61,7 +62,7 @@ def extract_data(driver, url):
             "Total_Objects": driver.find_element(By.ID, "totalObjects").text,
             "Date": date_part,  # extracted date
             "Time": time_part,  # extracted time
-            "Label":label
+            #"Label":label
         }
         return data
     except TimeoutException:
